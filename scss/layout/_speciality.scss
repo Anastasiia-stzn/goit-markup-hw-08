@@ -1,26 +1,42 @@
 .speciality {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .speciality__list {
-  text-decoration: none;
-  list-style: none;
-  display: flex;
-  padding-left: 0px;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .speciality__item {
-  margin-left: 30px;
-  min-width: 270px;
+  width: 100%;
 
-  &:first-child {
-    margin-left: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
   }
 }
 
 .speciality__group {
-  width: 270px;
+  // width: 270px;
   height: 120px;
   display: flex;
   align-items: center;

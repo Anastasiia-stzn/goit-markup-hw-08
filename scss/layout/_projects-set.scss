@@ -1,15 +1,25 @@
-.projects {
-  list-style: none;
-  text-decoration: none;
+.projects__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
 
-  &__item {
-    min-width: 370;
-    flex-basis: calc((370px - (var(--indent) * (var(--items) - 1)) / var(--items)));
+.projects__item {
+  max-width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    max-width: 354px;
   }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    max-width: 370px;
+  }
+
+  // flex-basis: calc((100% - (var(--indent) * (var(--items) - 1)) / var(--items)));
 }
 
 .projects__link {
@@ -28,20 +38,9 @@
   opacity: 1;
 }
 
-.projects__link:hover .overlay,
-.projects__link.link:focus .overlay {
-  transform: translateY(-100%);
-}
-
 .projects__thumb {
   position: relative;
   overflow: hidden;
-}
-
-.projects__image {
-  width: 370px;
-  height: 294px;
-  display: block;
 }
 
 .project__caption {
@@ -49,6 +48,11 @@
   border-left: 1px solid var(--button-color-hover);
   border-right: 1px solid var(--button-color-hover);
   border-bottom: 1px solid var(--button-color-hover);
+}
+.project__caption--small {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 56px;
+  }
 }
 
 .projects__text {
@@ -69,19 +73,25 @@
 
   transform: translateY(0);
   transition: transform var(--animation);
-
-  &__text {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
-    letter-spacing: 0.03em;
-    color: var(--main-bcg-color);
-    user-select: none;
-
-    width: 322px;
-    height: 168px;
-  }
 }
+.projects__link:hover .overlay,
+.projects__link:focus .overlay,
+.projects__link:active .overlay {
+  transform: translateY(-100%);
+}
+
+.overlay__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--main-bcg-color);
+  user-select: none;
+  width: 322px;
+  height: 168px;
+  color: var(--main-bcg-color);
+}
+
 .overlay__thumb {
   position: absolute;
   top: 50%;

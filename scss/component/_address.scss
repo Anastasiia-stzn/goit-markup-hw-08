@@ -1,3 +1,17 @@
+.footer__group {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 231px;
+    margin-right: 70px;
+  }
+}
 .address__list {
   list-style: none;
   text-decoration: none;
@@ -32,9 +46,13 @@
 }
 
 .address__item {
-  margin-bottom: 9px;
+  &:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
 
-  &:last-child {
-    margin-bottom: 0;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 }

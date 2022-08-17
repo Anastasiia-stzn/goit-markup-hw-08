@@ -1,12 +1,13 @@
 .work {
-  padding-bottom: 94px;
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding-bottom: 94px;
+  }
 }
 
 .work__list {
-  text-decoration: none;
-  list-style: none;
   display: flex;
-  padding: 0;
 }
 
 .work__item {

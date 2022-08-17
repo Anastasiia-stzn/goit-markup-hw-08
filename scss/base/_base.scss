@@ -13,4 +13,8 @@ body {
   font-family: var(--main-text-font);
   color: var(--main-text-color);
   background-color: var(--main-bcg-color);
+
+  @media screen and (min-width: 320) {
+    overflow-x: hidden;
+  }
 }
