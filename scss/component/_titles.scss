@@ -43,6 +43,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-header-color);
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .team__title {
