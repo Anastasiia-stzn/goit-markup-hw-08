@@ -28,6 +28,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
 }
 
 .join__list {

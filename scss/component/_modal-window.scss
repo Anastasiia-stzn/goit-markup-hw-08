@@ -40,7 +40,7 @@
 
 .modal__btn {
   position: absolute;
-  top: 8px;
+  top: 50px;
   right: 8px;
 
   display: flex;
@@ -55,6 +55,10 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   cursor: pointer;
+
+  @media screen and (min-width: 325px) {
+    top: 8px;
+  }
 }
 
 .modal__icon {

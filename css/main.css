@@ -422,7 +422,7 @@ body {
 
 .modal__btn {
   position: absolute;
-  top: 8px;
+  top: 50px;
   right: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,6 +440,11 @@ body {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+@media screen and (min-width: 325px) {
+  .modal__btn {
+    top: 8px;
+  }
 }
 
 .modal__icon {
@@ -1715,6 +1720,13 @@ body {
           justify-content: center;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .join__txt {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 
 .join__list {
   display: -webkit-box;
@@ -1759,12 +1771,16 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .projects__list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .projects__item {
@@ -1782,13 +1798,6 @@ body {
     -ms-flex-preferred-size: calc(33.3333333333% - 30px);
         flex-basis: calc(33.3333333333% - 30px);
     min-width: 370px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .projects__item:first-child {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
   }
 }
 
@@ -1823,15 +1832,13 @@ body {
 }
 
 .project__caption {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid var(--button-color-hover);
   border-right: 1px solid var(--button-color-hover);
   border-bottom: 1px solid var(--button-color-hover);
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .project__caption--small {
-    padding-bottom: 56px;
-  }
 }
 
 .projects__text {
@@ -1876,7 +1883,6 @@ body {
   width: 285px;
   height: 168px;
   color: var(--main-bcg-color);
-  text-align: center;
 }
 @media screen and (min-width: 480px) {
   .overlay__text {
